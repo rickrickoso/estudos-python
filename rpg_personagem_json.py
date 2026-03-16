@@ -1,9 +1,9 @@
-#FICHA DE RPG POR CÓDIGO
+#FICHA DE RPG POR CÓDIGO (IMPRESSÃO EM JSON)
 import json
 
 print("BEM VINDO A SAISCON\nMONTE SUA FICHA")
 
-#COLETA DE DADOS
+                                                            #COLETA DE DADOS
 nome = input("Digite o nome do personagem: ")
 especie = input("Digite sua espécie: ")
 atributoF = int(input("Digite sua força(0-5): "))
@@ -12,11 +12,11 @@ atributoI = int(input("Digite sua intelecto(0-5): "))
 print("\nSEU INVENTÁRIO ESTÁ VAZIO! ESCOLHA DOIS ITENS\n")
 inventario = [input("Digite o primeiro item: "), input("Digite o segundo item: ")]
 
-#CRIACAO DO DICIONARIO DO PERSONAGEM
+                                                            #CRIACAO DO DICIONARIO DO PERSONAGEM
 personagem = {
     "nome": nome,
     "especie": especie,
-    "atributos": {                      #SUB_DICIONARIO(DICIONARIO DE DICIONARIO)
+    "atributos": {                                          #SUB_DICIONARIO(DICIONARIO DE DICIONARIO)
         "forca": atributoF,
         "agilidade": atributoA,
         "intelecto": atributoI
@@ -24,4 +24,4 @@ personagem = {
     "inventario": inventario
     }
 
-print(json.dumps(personagem, indent=4, ensure_ascii=False))
+print(json.dumps(personagem, indent=4, ensure_ascii=False)) #UTILIZA O json.dumps PARA IMPRIMIR O DICIONÁRIO NO FORMATO PADRÃO .json
